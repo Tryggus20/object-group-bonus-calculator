@@ -95,16 +95,28 @@ function bonusCalc(employee) {
   if (employee.reviewRating === 4) {
     console.log("6%");
     obj.bonusPercentage = 0.06;
+    if (employee.employeeNumber.length === 4) {
+      obj.bonusPercentage += 0.05;
+    }
     console.log(obj);
   } //end of 6%
   if (employee.reviewRating === 5) {
     console.log("10%");
     obj.bonusPercentage = 0.1;
+    if (employee.employeeNumber.length === 4) {
+      obj.bonusPercentage += 0.05;
+    }
     console.log(obj);
   } //end of 10%
   if (employee.reviewRating <= 2) {
     console.log("0%");
+    if (employee.employeeNumber.length === 4) {
+      obj.bonusPercentage += 0.05;
+    }
     obj.bonusPercentage = 0.0;
+    if (employee.employeeNumber.length === 4) {
+      obj.bonusPercentage += 0.05;
+    }
     console.log(obj);
   } //end of 0% bonus
   /*function addFivePercent(employee) {
