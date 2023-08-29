@@ -74,7 +74,7 @@ console.log("array of employee data: ", employees);
 
 for (let i = 0; i < employees.length; i++) {
   let result = bonusCalc(employees[i]); //passing in every employee
-  console.log(result);
+  //console.log(result);
 } //end of for loop
 function bonusCalc(employee) {
   let obj = {
@@ -83,15 +83,14 @@ function bonusCalc(employee) {
     totalCompensation: 0, //adding new key to update later
     totalBonus: 0, //adding new key to update later
   }; //end of obj
+
   if (employee.reviewRating === 3) {
-    console.log("4%");
     obj.bonusPercentage = 0.04;
-    /*if (employeeNumber < 1000){
-      obj.bonusPercentage + 0.05;
-    }*/
+    if (employee.employeeNumber.length === 4) {
+      obj.bonusPercentage += 0.05;
+    }
+    console.log("4%");
     console.log(obj);
-    console.log(employee);
-    return obj;
   } //end of if for 4%
   if (employee.reviewRating === 4) {
     console.log("6%");
@@ -108,4 +107,10 @@ function bonusCalc(employee) {
     obj.bonusPercentage = 0.0;
     console.log(obj);
   } //end of 0% bonus
-} //end bonusCalc
+  /*function addFivePercent(employee) {
+    if (employee.employeeNumber > 9999){
+      obj.bonusPercentage * 1.05;
+    }*/
+  return obj;
+}
+//end bonusCalc
