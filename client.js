@@ -126,3 +126,5 @@ function bonusCalc(employee) {
   return obj;
 }
 //end bonusCalc
+
+// this is as far as we got in class. Switched goals to focus on the homework
